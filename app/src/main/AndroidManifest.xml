@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Layout_Experiment">
+        <!-- 程序入口（LAUNCHER）：目前是实验选择占位页，
+             详见 MainActivity 的注释 -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Layout_Experiment"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 实验一：线性布局 -->
+        <activity
+            android:name=".LinearLayoutActivity"
+            android:exported="true" />
+
+        <!-- 实验二：表格布局 -->
+        <activity
+            android:name=".TableLayoutActivity"
+            android:exported="true" />
+
+        <!-- 实验三：约束布局（计算器界面） -->
+        <activity
+            android:name=".ConstraintLayoutActivity"
+            android:exported="true" />
+
+        <!-- 实验四：约束布局综合（航班预订界面） -->
+        <activity
+            android:name=".FlightActivity"
+            android:exported="true" />
+
+        <!-- 实验五：Compose 待办列表（纯 Kotlin 代码写界面，无需 XML 布局） -->
+        <activity
+            android:name=".TodoActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
