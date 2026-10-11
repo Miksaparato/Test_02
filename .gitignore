@@ -1,5 +1,10 @@
 *.iml
 .gradle
+# 本机适配：Gradle 缓存被放到项目内（用户目录下的 ~/.gradle 在本机不可写），
+# 体积 2GB 以上，绝对不能提交。
+.gradle-user-home/
+# 队友打包过来的构建产物压缩包，不参与版本控制。
+app.zip
 /local.properties
 /.idea/caches
 /.idea/libraries
